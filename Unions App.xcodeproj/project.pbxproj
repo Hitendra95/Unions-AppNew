@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		A5650622781E31E32AC0B8D2 /* Pods_Unions_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FABBEBB64C885CB3412AB6A /* Pods_Unions_App.framework */; };
+		DCADD8B7206FA06C002A6994 /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCADD8B6206FA06C002A6994 /* loginViewController.swift */; };
+		DCADD8B9206FA521002A6994 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCADD8B8206FA521002A6994 /* HomeViewController.swift */; };
 		DCAEF26D206F7E8800C82835 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAEF26C206F7E8800C82835 /* AppDelegate.swift */; };
-		DCAEF26F206F7E8800C82835 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAEF26E206F7E8800C82835 /* ViewController.swift */; };
 		DCAEF272206F7E8800C82835 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCAEF270206F7E8800C82835 /* Main.storyboard */; };
 		DCAEF275206F7E8800C82835 /* Unions_App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DCAEF273206F7E8800C82835 /* Unions_App.xcdatamodeld */; };
 		DCAEF277206F7E8800C82835 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCAEF276206F7E8800C82835 /* Assets.xcassets */; };
@@ -24,9 +25,10 @@
 		47882285830F316AC2FAEB95 /* Pods-Unions App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Unions App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Unions App/Pods-Unions App.debug.xcconfig"; sourceTree = "<group>"; };
 		6F7E308D3143329DF813EE1E /* Pods-Unions App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Unions App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Unions App/Pods-Unions App.release.xcconfig"; sourceTree = "<group>"; };
 		8FABBEBB64C885CB3412AB6A /* Pods_Unions_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Unions_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCADD8B6206FA06C002A6994 /* loginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = loginViewController.swift; path = ../loginViewController.swift; sourceTree = "<group>"; };
+		DCADD8B8206FA521002A6994 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		DCAEF269206F7E8800C82835 /* Unions App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Unions App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCAEF26C206F7E8800C82835 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DCAEF26E206F7E8800C82835 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DCAEF271206F7E8800C82835 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DCAEF274206F7E8800C82835 /* Unions_App.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Unions_App.xcdatamodel; sourceTree = "<group>"; };
 		DCAEF276206F7E8800C82835 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -89,8 +91,9 @@
 			isa = PBXGroup;
 			children = (
 				DCAEF26C206F7E8800C82835 /* AppDelegate.swift */,
-				DCAEF26E206F7E8800C82835 /* ViewController.swift */,
+				DCADD8B6206FA06C002A6994 /* loginViewController.swift */,
 				DCAEF270206F7E8800C82835 /* Main.storyboard */,
+				DCADD8B8206FA521002A6994 /* HomeViewController.swift */,
 				DCAEF276206F7E8800C82835 /* Assets.xcassets */,
 				DCAEF278206F7E8800C82835 /* LaunchScreen.storyboard */,
 				DCAEF27B206F7E8800C82835 /* Info.plist */,
@@ -226,9 +229,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Unions App/Pods-Unions App-resources.sh",
+				"${PODS_ROOT}/AccountKit/AccountKitStrings.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccountKitStrings.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -242,9 +248,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DCAEF26F206F7E8800C82835 /* ViewController.swift in Sources */,
 				DCAEF275206F7E8800C82835 /* Unions_App.xcdatamodeld in Sources */,
 				DCAEF26D206F7E8800C82835 /* AppDelegate.swift in Sources */,
+				DCADD8B7206FA06C002A6994 /* loginViewController.swift in Sources */,
+				DCADD8B9206FA521002A6994 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

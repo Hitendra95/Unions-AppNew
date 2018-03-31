@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Unions_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="loginViewController" customModule="Unions_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -39,25 +39,60 @@
                                 <color key="textColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uxu-Xx-MWk" customClass="FBSDKLoginButton" customModule="Unions_App" customModuleProvider="target">
+                                <rect key="frame" x="15" y="612" width="345" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.98039215690000003" blue="0.57254901960000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="mc9-U1-U0E"/>
+                                </constraints>
+                                <state key="normal" title="Continue With Phone Number">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="ContinueWithPhoneNumberButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dAs-ni-Yds"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="5kH-c6-92X" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="119" id="6ye-cX-b1L"/>
                             <constraint firstItem="oL2-Tl-aQb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="249" id="Ibo-zN-k31"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Uxu-Xx-MWk" secondAttribute="trailing" constant="15" id="Jyp-a3-EFR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oL2-Tl-aQb" secondAttribute="trailing" constant="105" id="KGh-MX-8Pi"/>
                             <constraint firstItem="Goc-AR-YNp" firstAttribute="top" secondItem="oL2-Tl-aQb" secondAttribute="bottom" constant="8" id="Ysz-XC-3uo"/>
+                            <constraint firstItem="Uxu-Xx-MWk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="Z1G-Cv-mPm"/>
                             <constraint firstItem="Goc-AR-YNp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="131" id="flz-2f-AiD"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Goc-AR-YNp" secondAttribute="trailing" constant="131" id="gU4-WH-qie"/>
                             <constraint firstItem="5kH-c6-92X" firstAttribute="top" secondItem="Goc-AR-YNp" secondAttribute="bottom" constant="8" id="rbs-tF-wec"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5kH-c6-92X" secondAttribute="trailing" constant="119" id="x6c-jM-wWA"/>
                             <constraint firstItem="oL2-Tl-aQb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="104" id="yKs-Mb-UYN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Uxu-Xx-MWk" secondAttribute="bottom" constant="25" id="yXe-lK-ygK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="continueWithPhoneNumberButton" destination="Uxu-Xx-MWk" id="DRy-9o-lX1"/>
+                        <segue destination="CCt-tz-4U8" kind="show" identifier="showHomeScreen" id="KPg-iB-QXk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="120.8" y="32.833583208395808"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="xAS-vm-f2Q">
+            <objects>
+                <viewController id="CCt-tz-4U8" customClass="HomeViewController" customModule="Unions_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hXX-yO-upa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="bs5-Lo-Ryf"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PRY-k0-KNV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1343" y="37"/>
         </scene>
     </scenes>
     <resources>

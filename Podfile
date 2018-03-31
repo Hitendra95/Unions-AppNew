@@ -8,6 +8,7 @@ pod 'FBSDKCoreKit'
 pod 'FBSDKLoginKit'
 pod 'FBSDKShareKit'
 pod 'Bolts'
+pod 'AccountKit'
   # Pods for Unions App
 
 end
